@@ -1,0 +1,232 @@
+[
+  {
+    "id": "blitz-pizza",
+    "title": "Blitz-Pizza",
+    "categories": ["herzhaft"],
+    "badge": "Herzhaft · 368 kcal (gesamte Portion)",
+    "meta": "KH 33 g · Eiweiß 31 g · Fett 11 g",
+    "image": "assets/blitz-pizza.jpg",
+    "pdf": "pdf/blitz-pizza.pdf",
+    "detail": "rezepte/blitz-pizza.html"
+  },
+  {
+    "id": "burger-lasagne",
+    "title": "Burger-Lasagne",
+    "categories": ["herzhaft"],
+    "badge": "Herzhaft · 557 kcal (pro Portion)",
+    "meta": "KH 37 g · Eiweiß 53 g · Fett 20 g",
+    "image": "assets/burger-lasagne.jpg",
+    "pdf": "pdf/burger-lasagne.pdf",
+    "detail": "rezepte/burger-lasagne.html"
+  },
+  {
+    "id": "chili-con-carne",
+    "title": "Chili con Carne",
+    "categories": ["herzhaft"],
+    "badge": "Herzhaft · 1428 kcal (gesamte Portion)",
+    "meta": "KH 135 g · Eiweiß 129 g · Fett 29 g",
+    "image": "assets/chili-con-carne.jpg",
+    "pdf": "pdf/chili-con-carne.pdf",
+    "detail": "rezepte/chili-con-carne.html"
+  },
+  {
+    "id": "eier-gemuese-muffins",
+    "title": "Eier-Gemüse-Muffins",
+    "categories": ["herzhaft", "snack"],
+    "badge": "Herzhaft · Snack · 92 kcal (pro Muffin)",
+    "meta": "KH 3 g · Eiweiß 9 g · Fett 5 g",
+    "image": "assets/eier-gemuese-muffins.jpg",
+    "pdf": "pdf/eier-gemuese-muffins.pdf",
+    "detail": "rezepte/eier-gemuese-muffins.html"
+  },
+  {
+    "id": "gnocchis-brokkoli-cremesauce",
+    "title": "Gnocchis in Brokkoli-Cremesauce",
+    "categories": ["herzhaft"],
+    "badge": "Herzhaft · 568 kcal (pro Portion)",
+    "meta": "KH 57 g · Eiweiß 28 g · Fett 24 g",
+    "image": "assets/gnocchis-in-brokkoli-cremesauce.jpg",
+    "pdf": "pdf/gnocchis-brokkoli-cremesauce.pdf",
+    "detail": "rezepte/gnocchis-brokkoli-cremesauce.html"
+  },
+  {
+    "id": "haehnchen-gemuese-auflauf",
+    "title": "Hähnchen-Gemüse-Auflauf",
+    "categories": ["herzhaft"],
+    "badge": "Herzhaft · 480 kcal (pro Portion)",
+    "meta": "KH 18 g · Eiweiß 71 g · Fett 11 g",
+    "image": "assets/haehnchen-gemuese-auflauf.jpg",
+    "pdf": "pdf/haehnchen-gemuese-auflauf.pdf",
+    "detail": "rezepte/haehnchen-gemuese-auflauf.html"
+  },
+  {
+    "id": "lasagne-klassisch",
+    "title": "Lasagne",
+    "categories": ["herzhaft"],
+    "badge": "Herzhaft · 741 kcal (pro Portion)",
+    "meta": "KH 45 g · Eiweiß 73 g · Fett 28 g",
+    "image": "assets/lasagne.jpg",
+    "pdf": "pdf/lasagne-klassisch.pdf",
+    "detail": "rezepte/lasagne-klassisch.html"
+  },
+  {
+    "id": "ofengemuese-koerniger-frischkaese",
+    "title": "Ofengemüse mit körnigem Frischkäse",
+    "categories": ["herzhaft"],
+    "badge": "Herzhaft · 290 kcal (gesamte Portion)",
+    "meta": "KH 19 g · Eiweiß 38 g · Fett 3 g",
+    "image": "assets/ofengemuese-mit-koernigen-frischkaese.jpg",
+    "pdf": "pdf/ofengemuese-koerniger-frischkaese.pdf",
+    "detail": "rezepte/ofengemuese-koerniger-frischkaese.html"
+  },
+  {
+    "id": "schinken-kaese-broetchen",
+    "title": "Schinken-Käse-Brötchen",
+    "categories": ["fruehstueck", "herzhaft"],
+    "badge": "Frühstück · Herzhaft · 196 kcal (pro Brötchen)",
+    "meta": "KH 29 g · Eiweiß 13 g · Fett 2 g",
+    "image": "assets/schinken-kaese-broetchen.jpg",
+    "pdf": "pdf/schinken-kaese-broetchen.pdf",
+    "detail": "rezepte/schinken-kaese-broetchen.html"
+  },
+  {
+    "id": "schinken-kaese-nudeln",
+    "title": "Schinken-Käse-Nudeln",
+    "categories": ["herzhaft"],
+    "badge": "Herzhaft · 576 kcal (pro Portion)",
+    "meta": "KH 57 g · Eiweiß 38 g · Fett 20 g",
+    "image": "assets/schinken-kaese-nudeln.jpg",
+    "pdf": "pdf/schinken-kaese-nudeln.pdf",
+    "detail": "rezepte/schinken-kaese-nudeln.html"
+  },
+  {
+    "id": "spinat-feta-lasagne",
+    "title": "Spinat-Feta-Lasagne",
+    "categories": ["herzhaft"],
+    "badge": "Herzhaft · 604 kcal (pro Portion)",
+    "meta": "KH 40 g · Eiweiß 51 g · Fett 26 g",
+    "image": "assets/spinat-feta-lasagne.jpg",
+    "pdf": "pdf/spinat-feta-lasagne.pdf",
+    "detail": "rezepte/spinat-feta-lasagne.html"
+  },
+  {
+    "id": "baked-oats",
+    "title": "Baked Oats",
+    "categories": ["fruehstueck", "suess"],
+    "badge": "Frühstück · Süß · 339 kcal (pro Portion)",
+    "meta": "KH 41 g · Eiweiß 15 g · Fett 11 g",
+    "image": "assets/baked-oats.jpg",
+    "pdf": "pdf/baked-oats.pdf",
+    "detail": "rezepte/baked-oats.html"
+  },
+  {
+    "id": "haferflocken-blondies",
+    "title": "Haferflocken-Blondies",
+    "categories": ["suess", "snack"],
+    "badge": "Süß · Snack · 1341 kcal (gesamte Portion)",
+    "meta": "KH 111 g · Eiweiß 90 g · Fett 50 g",
+    "image": "assets/haferflocken-blondies.jpg",
+    "pdf": "pdf/haferflocken-blondies.pdf",
+    "detail": "rezepte/haferflocken-blondies.html"
+  },
+  {
+    "id": "marmor-bananenkuchen",
+    "title": "Marmor-Bananenkuchen",
+    "categories": ["suess"],
+    "badge": "Süß · Kuchen · 1319 kcal (gesamte Portion)",
+    "meta": "KH 154 g · Eiweiß 65 g · Fett 41 g",
+    "image": "assets/marmor-bananenkuchen.jpg",
+    "pdf": "pdf/marmor-bananenkuchen.pdf",
+    "detail": "rezepte/marmor-bananenkuchen.html"
+  },
+  {
+    "id": "milchreis-auflauf",
+    "title": "Milchreis-Auflauf",
+    "categories": ["fruehstueck", "suess"],
+    "badge": "Frühstück · Süß · 844 kcal (gesamte Portion)",
+    "meta": "KH 117 g · Eiweiß 49 g · Fett 17 g",
+    "image": "assets/milchreis-auflauf.jpg",
+    "pdf": "pdf/milchreis-auflauf.pdf",
+    "detail": "rezepte/milchreis-auflauf.html"
+  },
+  {
+    "id": "overnight-oats",
+    "title": "Overnight Oats",
+    "categories": ["fruehstueck"],
+    "badge": "Frühstück · 414 kcal (gesamte Portion)",
+    "meta": "KH 35 g · Eiweiß 27 g · Fett 16 g",
+    "image": "assets/overnight-oats.jpg",
+    "pdf": "pdf/overnight-oats.pdf",
+    "detail": "rezepte/overnight-oats.html"
+  },
+  {
+    "id": "schneller-mikrowellenkuchen",
+    "title": "Schneller Mikrowellenkuchen",
+    "categories": ["suess", "snack"],
+    "badge": "Süß · Snack · 372 kcal (gesamte Portion)",
+    "meta": "KH 28 g · Eiweiß 30 g · Fett 13 g",
+    "image": "assets/schneller-mikrowellenkuchen.jpg",
+    "pdf": "pdf/schneller-mikrowellenkuchen.pdf",
+    "detail": "rezepte/schneller-mikrowellenkuchen.html"
+  },
+  {
+    "id": "schokomuffins",
+    "title": "Schokomuffins",
+    "categories": ["suess", "snack"],
+    "badge": "Süß · Snack · 164 kcal (pro Muffin)",
+    "meta": "KH 20 g · Eiweiß 10 g · Fett 3 g",
+    "image": "assets/schokomuffins.jpg",
+    "pdf": "pdf/schokomuffins.pdf",
+    "detail": "rezepte/schokomuffins.html"
+  },
+  {
+    "id": "soft-banana-peanut-cookies",
+    "title": "Soft-Banana-Peanut-Cookies",
+    "categories": ["suess", "snack"],
+    "badge": "Süß · Snack · 1196 kcal (gesamte Portion)",
+    "meta": "KH 138 g · Eiweiß 63 g · Fett 37 g",
+    "image": "assets/soft-banana-peanut-cookies.jpg",
+    "pdf": "pdf/soft-banana-peanut-cookies.pdf",
+    "detail": "rezepte/soft-banana-peanut-cookies.html"
+  },
+  {
+    "id": "suesse-broetchen-schokodrops",
+    "title": "Süße Brötchen mit Schokodrops",
+    "categories": ["fruehstueck", "suess"],
+    "badge": "Frühstück · Süß · 203 kcal (pro Brötchen)",
+    "meta": "KH 33 g · Eiweiß 9 g · Fett 3 g",
+    "image": "assets/suesse-broetchen-mit-schokodropse.jpg",
+    "pdf": "pdf/suesse-broetchen-schokodrops.pdf",
+    "detail": "rezepte/suesse-broetchen-schokodrops.html"
+  },
+  {
+    "id": "vanillepudding-quark-beerengruetze",
+    "title": "Vanillepudding-Quark mit Beerengrütze",
+    "categories": ["suess", "dessert"],
+    "badge": "Süß · Dessert · 307 kcal (pro Portion)",
+    "meta": "KH 41 g · Eiweiß 20 g · Fett 4 g",
+    "image": "assets/vanillepudding-quark-mit-beerengruetze.jpg",
+    "pdf": "pdf/vanillepudding-quark-beerengruetze.pdf",
+    "detail": "rezepte/vanillepudding-quark-beerengruetze.html"
+  },
+  {
+    "id": "zimtschnecken-kuchen",
+    "title": "Zimtschnecken-Kuchen",
+    "categories": ["suess"],
+    "badge": "Süß · Kuchen · 1664 kcal (gesamter Kuchen)",
+    "meta": "KH 95 g · Eiweiß 88 g · Fett 97 g",
+    "image": "assets/zimtschnecken-kuchen.jpg",
+    "pdf": "pdf/zimtschnecken-kuchen.pdf",
+    "detail": "rezepte/zimtschnecken-kuchen.html"
+  },
+  {
+    "id": "zitronencreme-kuchenboden",
+    "title": "Zitronencreme mit Kuchenboden",
+    "categories": ["suess", "dessert"],
+    "badge": "Süß · Dessert · 526–699 kcal (gesamte Portion)",
+    "meta": "ohne Toppings: KH 18 g · Eiweiß 71 g · Fett 13 g | mit Toppings: KH 33 g · Eiweiß 74 g · Fett 24 g",
+    "image": "assets/zitronencreme-mit-kuchenboden.jpg",
+    "pdf": "pdf/zitronencreme-kuchenboden.pdf",
+    "detail": "rezepte/zitronencreme-kuchenboden.html"
+  }
+]

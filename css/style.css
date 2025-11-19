@@ -1,4 +1,5 @@
 :root {
+  /* Farben */
   --bg: #fffdf7;
   --pastellgelb: #fff5b8;
   --pastellrosa: #f8c6c8;
@@ -6,10 +7,14 @@
   --salbei: #a3b18a;
   --pfirsich: #ffd6a5;
   --text: #3e3e3e;
+
+  /* Layout & Effekte */
   --radius-lg: 24px;
   --radius-md: 16px;
   --shadow-soft: 0 10px 25px rgba(163, 177, 138, 0.18);
 }
+
+/* ========== Global Reset & Basics ========== */
 
 *,
 *::before,
@@ -21,7 +26,7 @@ body {
   margin: 0;
   font-family: "Nunito", "Karla", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
   color: var(--text);
-   background: linear-gradient(
+  background: linear-gradient(
     180deg,
     #fffdf7 0%,
     #fffaf0 40%,
@@ -30,6 +35,11 @@ body {
   );
   line-height: 1.6;
 }
+
+main {
+  padding: 1rem 1.25rem 4rem;
+}
+
 section {
   position: relative;
 }
@@ -41,7 +51,7 @@ section::before {
   left: 0;
   right: 0;
   height: 12px;
-  background: linear-gradient(to bottom, rgba(0,0,0,0.04), transparent);
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.04), transparent);
 }
 
 img {
@@ -52,19 +62,37 @@ img {
 
 a {
   color: inherit;
+  text-decoration: none;
 }
 
-main {
-  padding: 1rem 1.25rem 4rem;
+/* Utility */
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  border: 0;
 }
-/* ========== Site Header ========== */
+
+[hidden] {
+  display: none !important;
+}
+
+/* ========== Header & Navigation ========== */
 
 .site-header {
-  padding: 1.5rem 1.25rem 2rem;
-  background: linear-gradient(135deg, var(--pastellrosa), var(--pastellgelb));
-  border-radius: 1.5rem;
-  box-shadow: var(--shadow-soft);
   margin: 1.25rem 1rem 2rem;
+  padding: 1.5rem 1.25rem 2rem;
+  border-radius: 1.5rem;
+  background: linear-gradient(135deg, var(--pastellrosa), var(--pastellgelb));
+  box-shadow: var(--shadow-soft);
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
 }
 
 .site-header__inner {
@@ -105,7 +133,13 @@ main {
   color: rgba(62, 62, 62, 0.85);
 }
 
-/* ========== Navigation Pills ========== */
+.logo {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--salbei);
+}
+
+/* Navigation Pills */
 
 .site-nav {
   display: flex;
@@ -114,72 +148,42 @@ main {
   justify-content: center;
 }
 
-.site-nav__pill {
+.site-nav__pill,
+.site-nav a {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   padding: 0.45rem 0.9rem;
   border-radius: 999px;
   background: var(--pastellgelb);
-  color: var(--text);
   font-size: 0.9rem;
-  text-decoration: none;
+  font-weight: 600;
   border: 1px solid rgba(0, 0, 0, 0.04);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.04);
-  transition: transform 0.15s ease-out, box-shadow 0.15s ease-out,
+  transition:
+    transform 0.15s ease-out,
+    box-shadow 0.15s ease-out,
     background-color 0.15s ease-out;
 }
 
 .site-nav__pill:hover,
-.site-nav__pill:focus-visible {
-  background: #ffe97a; /* etwas kräftigeres Gelb */
+.site-nav__pill:focus-visible,
+.site-nav a:hover,
+.site-nav a:focus-visible {
+  background: #ffe97a;
   transform: translateY(-1px);
   box-shadow: 0 6px 14px rgba(0, 0, 0, 0.08);
 }
 
-/* leichte Desktop-Anpassung */
+/* Variante für Detail-Seiten (z. B. Rezeptdetail) */
 
-@media (min-width: 768px) {
-  .site-header {
-    margin: 2rem auto 2.5rem;
-    max-width: 720px;
-  }
-
-  .site-header__title {
-    font-size: 1.5rem;
-  }
-
-  .site-header__subtitle {
-    font-size: 1rem;
-  }
-}
-.site-header {
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
-  padding: 1.5rem 1.25rem;
+.site-header--detail {
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 0.5rem;
 }
 
-.logo {
-  font-size: 1.4rem;
-  font-weight: 700;
-  color: var(--salbei);
-  text-decoration: none;
-}
-
-.site-nav {
-  display: flex;
-  gap: 1rem;
-  flex-wrap: wrap;
-}
-
-.site-nav a {
-  padding: 0.4rem 0.8rem;
-  border-radius: 999px;
-  background: var(--pastellgelb);
-  text-decoration: none;
-  font-weight: 600;
-}
+/* ========== Hero ========== */
 
 .hero {
   display: grid;
@@ -204,6 +208,8 @@ main {
   overflow: hidden;
   box-shadow: var(--shadow-soft);
 }
+
+/* ========== Buttons ========== */
 
 .button {
   display: inline-flex;
@@ -230,32 +236,48 @@ main {
 .button--ghost {
   border: 1px solid var(--salbei);
   color: var(--salbei);
+  background: transparent;
 }
+
+/* ========== Cards & Layout-Blöcke ========== */
 
 .about__card,
-.info-card
- {
-  background: #fffdf7;
+.info-card {
+  background: var(--cremeweiss);
   border-radius: var(--radius-lg);
   padding: 1.5rem;
-  box-shadow:
-  0 4px 20px rgba(255, 235, 170, 0.25); /* sehr leichter Gelbton */
+  box-shadow: 0 4px 20px rgba(255, 235, 170, 0.25);
 }
 
-.contact {
-margin-top:2.5rem;
-text-align:left;
+.info-grid {
+  display: grid;
+  gap: 1rem;
 }
+
+.info-card h3 {
+  margin-top: 0;
+}
+
+.section-header {
+  text-align: left;
+  margin-bottom: 1.5rem;
+}
+
+/* Kontaktbereich */
+
+.contact {
+  margin-top: 2.5rem;
+  text-align: left;
+}
+
 .contact-card {
   background: var(--cremeweiss);
   border-radius: var(--radius-lg);
   padding: 1.5rem;
   box-shadow: var(--shadow-soft);
 }
-.section-header {
-  text-align: left;
-  margin-bottom: 1.5rem;
-}
+
+/* ========== Rezept-Übersicht ========== */
 
 .recipe-filter {
   display: flex;
@@ -271,13 +293,15 @@ text-align:left;
 }
 
 .chip {
-  border: 1px solid transparent;
   border-radius: 999px;
   padding: 0.55rem 1.1rem;
+  border: 1px solid transparent;
   background: var(--pfirsich);
   font-weight: 600;
   cursor: pointer;
-  transition: background 0.2s ease, color 0.2s ease;
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
 }
 
 .chip--active {
@@ -293,12 +317,18 @@ text-align:left;
 .recipe-card {
   display: flex;
   flex-direction: column;
-  background: linear-gradient(150deg, rgba(255, 253, 247, 0.9), rgba(255, 245, 184, 0.6));
-  border-radius: var(--radius-lg);
-  padding: 0.75rem;
   gap: 1rem;
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  padding: 0.75rem;
+  border-radius: var(--radius-lg);
+  background: linear-gradient(
+    150deg,
+    rgba(255, 253, 247, 0.9),
+    rgba(255, 245, 184, 0.6)
+  );
   box-shadow: var(--shadow-soft);
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
 }
 
 .recipe-card:hover {
@@ -310,7 +340,7 @@ text-align:left;
   width: 100%;
   aspect-ratio: 1 / 1;
   object-fit: cover;
-  border-radius:50%
+  border-radius: 50%;
 }
 
 .recipe-card__content {
@@ -324,42 +354,14 @@ text-align:left;
   color: var(--text);
 }
 
+/* Diese Infos blendest du in der Kartenübersicht aus */
 .recipe-card__category,
 .recipe-card__meta,
 .recipe-card__link {
   display: none;
 }
 
-.info-grid {
-  display: grid;
-  gap: 1rem;
-}
-
-.info-card h3 {
-  margin-top: 0;
-}
-
-.site-footer {
-  padding: 2rem 1.25rem;
-  text-align: center;
-  font-size: 0.9rem;
-  color: #666;
-}
-
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0 0 0 0);
-  border: 0;
-}
-
-[hidden] {
-  display: none !important;
-}
+/* Klickbare Karten */
 
 .recipe-card--linked {
   cursor: pointer;
@@ -375,11 +377,7 @@ text-align:left;
   transform: translateY(1px);
 }
 
-.site-header--detail {
-  flex-direction: row;
-  justify-content: space-between;
-  gap: 0.5rem;
-}
+/* ========== Rezept-Detailseite ========== */
 
 .recipe-detail {
   max-width: 840px;
@@ -430,15 +428,15 @@ text-align:left;
 }
 
 .recipe-detail__lead {
-  font-size: 1.15rem;
   margin: 0;
+  font-size: 1.15rem;
 }
 
 .recipe-detail__meta,
 .recipe-detail__note {
-  color: #6b6b6b;
-  font-size: 0.95rem;
   margin: 0;
+  font-size: 0.95rem;
+  color: #6b6b6b;
 }
 
 .recipe-detail__section {
@@ -467,8 +465,8 @@ text-align:left;
 
 .recipe-detail__fact strong {
   display: block;
-  font-size: 1.3rem;
   margin: 0.2rem 0;
+  font-size: 1.3rem;
 }
 
 .recipe-detail__fact small {
@@ -479,6 +477,17 @@ text-align:left;
 .recipe-detail__download {
   text-align: center;
 }
+
+/* ========== Footer ========== */
+
+.site-footer {
+  padding: 2rem 1.25rem;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/* ========== Media Queries ========== */
 
 @media (max-width: 520px) {
   .site-header--detail {
@@ -493,9 +502,19 @@ text-align:left;
   }
 
   .site-header {
+    margin: 2rem auto 2.5rem;
+    max-width: 720px;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+  }
+
+  .site-header__title {
+    font-size: 1.5rem;
+  }
+
+  .site-header__subtitle {
+    font-size: 1rem;
   }
 
   .hero {
