@@ -1,0 +1,29 @@
+/* Base Stylesheet */
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Root Variablen */
+:root {
+  --font-base: "Inter", sans-serif;
+  --font-size: 16px;
+
+  --color-text: #222;
+  --color-bg: #fff;
+  --color-primary: #108a9a;
+  --color-dark: #1e1e1e;
+  --color-light: #f5f5f5;
+}
+
+/* Body Defaults */
+body {
+  font-family: var(--font-base);
+  font-size: var(--font-size);
+  line-height: 1.6;
+  color: var(--color-text);
+  background: var(--color-bg);
+}
