@@ -21,12 +21,27 @@ body {
   margin: 0;
   font-family: "Nunito", "Karla", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
   color: var(--text);
-  background:
-    radial-gradient(110% 110% at 12% 15%, rgba(248, 198, 200, 0.55), transparent 45%),
-    radial-gradient(90% 120% at 85% 0%, rgba(255, 245, 184, 0.65), transparent 50%),
-    radial-gradient(120% 95% at 70% 90%, rgba(255, 214, 165, 0.5), transparent 45%),
-    var(--bg);
+   background: linear-gradient(
+    180deg,
+    #fffdf7 0%,
+    #fffaf0 40%,
+    rgba(255, 235, 240, 0.4) 75%,
+    rgba(255, 245, 200, 0.35) 100%
+  );
   line-height: 1.6;
+}
+section {
+  position: relative;
+}
+
+section::before {
+  content: "";
+  position: absolute;
+  top: -12px;
+  left: 0;
+  right: 0;
+  height: 12px;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.04), transparent);
 }
 
 img {
@@ -40,9 +55,104 @@ a {
 }
 
 main {
-  padding: 0 1.25rem 4rem;
+  padding: 1rem 1.25rem 4rem;
+}
+/* ========== Site Header ========== */
+
+.site-header {
+  padding: 1.5rem 1.25rem 2rem;
+  background: linear-gradient(135deg, var(--pastellrosa), var(--pastellgelb));
+  border-radius: 1.5rem;
+  box-shadow: var(--shadow-soft);
+  margin: 1.25rem 1rem 2rem;
 }
 
+.site-header__inner {
+  max-width: 480px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.site-header__logo {
+  width: 72px;
+  height: 72px;
+  margin: 0 auto 0.5rem;
+  border-radius: 50%;
+  background: var(--cremeweiss);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+}
+
+.site-header__logo-img {
+  width: 70%;
+  height: 70%;
+  object-fit: contain;
+}
+
+.site-header__title {
+  margin: 0 0 0.35rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--salbei);
+}
+
+.site-header__subtitle {
+  margin: 0 0 1.25rem;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: rgba(62, 62, 62, 0.85);
+}
+
+/* ========== Navigation Pills ========== */
+
+.site-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: center;
+}
+
+.site-nav__pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.45rem 0.9rem;
+  border-radius: 999px;
+  background: var(--pastellgelb);
+  color: var(--text);
+  font-size: 0.9rem;
+  text-decoration: none;
+  border: 1px solid rgba(0, 0, 0, 0.04);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.04);
+  transition: transform 0.15s ease-out, box-shadow 0.15s ease-out,
+    background-color 0.15s ease-out;
+}
+
+.site-nav__pill:hover,
+.site-nav__pill:focus-visible {
+  background: #ffe97a; /* etwas kräftigeres Gelb */
+  transform: translateY(-1px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.08);
+}
+
+/* leichte Desktop-Anpassung */
+
+@media (min-width: 768px) {
+  .site-header {
+    margin: 2rem auto 2.5rem;
+    max-width: 720px;
+  }
+
+  .site-header__title {
+    font-size: 1.5rem;
+  }
+
+  .site-header__subtitle {
+    font-size: 1rem;
+  }
+}
 .site-header {
   display: flex;
   flex-direction: column;
@@ -125,10 +235,11 @@ main {
 .about__card,
 .info-card
  {
-  background: var(--cremeweiss);
+  background: #fffdf7;
   border-radius: var(--radius-lg);
   padding: 1.5rem;
-  box-shadow: var(--shadow-soft);
+  box-shadow:
+  0 4px 20px rgba(255, 235, 170, 0.25); /* sehr leichter Gelbton */
 }
 
 .contact {
