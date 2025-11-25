@@ -36,7 +36,7 @@ body {
   font-family: "Georgia Pro", Georgia, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
   color: var(--text);
   font-weight: 300;
-  font-size: 16px; /* ≈ 12pt */
+  font-size: 16px;
   line-height: 1.5;
   background: linear-gradient(
     180deg,
@@ -89,13 +89,11 @@ h6 {
   margin: 0 0 0.75rem;
 }
 
-/* 16pt-Äquivalent für die Hauptüberschriften */
 h1,
 h2 {
   font-size: 22px;
 }
 
-/* leichte Abstufung für die restlichen Überschriften */
 h3 {
   font-size: 1.15rem;
 }
@@ -181,8 +179,8 @@ p {
   margin: 0 0 1.25rem;
   font-size: 1rem;
   line-height: 1.6;
-  color: #4a4a4a;         /* dunkler, besser lesbar */
-  text-align: center;     /* kein Blocksätzchen hier */
+  color: #4a4a4a;
+  text-align: center;
 }
 
 .logo {
@@ -620,13 +618,11 @@ p {
   transition: transform 0.15s ease-out, box-shadow 0.18s ease-out;
 }
 
-/* Hover – leicht anheben */
 .info-card:hover {
   transform: translateY(-4px);
   box-shadow: 0 22px 34px rgba(163,177,138,0.25);
 }
 
-/* Titel */
 .info-card h3 {
   margin: 0 0 0.5rem;
   font-size: 1.25rem;
@@ -634,7 +630,6 @@ p {
   font-weight: 700;
 }
 
-/* Text */
 .info-card p {
   margin: 0;
   color: var(--text);
@@ -649,16 +644,15 @@ p {
   justify-content: center;
 }
 
-/* Floating Card */
 .footer-card {
   position: relative;
   max-width: 900px;
   width: 100%;
 
-  background: #ffffffee; /* leicht transparent für den Blur */
+  background: #ffffffee;
   border-radius: var(--radius-lg);
 
-  padding: 2.6rem 1.8rem 1.8rem; /* Platz für Badge oben */
+  padding: 2.6rem 1.8rem 1.8rem;
   box-shadow:
     0 8px 24px rgba(0,0,0,0.04),
     0 18px 34px rgba(163,177,138,0.18);
@@ -669,7 +663,6 @@ p {
   text-align: center;
 }
 
-/* Der Hinweistext */
 .footer-card p {
   margin: 0 auto;
   font-size: 0.92rem;
@@ -678,7 +671,6 @@ p {
   max-width: 40rem;
 }
 
-/* Badge schwebt oben mittig */
 .footer-badge {
   position: absolute;
   top: -16px;
@@ -693,7 +685,6 @@ p {
   align-items: center;
   justify-content: center;
 
-  /* Brand-Look */
   background: var(--salbei);
   color: #ffffff;
   font-size: 0.95rem;
@@ -722,13 +713,11 @@ p {
 
 @media (min-width: 768px) {
 
-  /* zentriertes Main */
   main {
     max-width: 1100px;
     margin: 0 auto;
   }
 
-  /* ABOUT: jetzt zwei Spalten */
   .about__content {
     grid-template-columns: 1.4fr 1fr;
     column-gap: 2rem;
@@ -743,7 +732,6 @@ p {
     margin: 0;
   }
 
-  /* Desktop Header */
   .site-header {
     margin: 2rem auto 2.5rem;
     max-width: 720px;
@@ -766,23 +754,19 @@ p {
     font-size: 1rem;
   }
 
-  /* Hero Layout */
   .hero {
     grid-template-columns: 1fr 1fr;
     align-items: center;
   }
 
-  /* Rezeptgrid */
   .recipe-grid {
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   }
 
-  /* Info Grid */
   .info-grid {
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   }
 
-  /* Rezept Detail */
   .recipe-detail__hero {
     grid-template-columns: 1fr 1fr;
     align-items: center;
