@@ -302,8 +302,6 @@ p {
   background: transparent;
 }
 
-/* ========== ABOUT SECTION (final clean version) ========== */
-
 .about {
   padding: 0 1.25rem 2.5rem;
   display: flex;
@@ -733,11 +731,12 @@ p {
   .info-grid {
     grid-template-columns: repeat(3, 1fr);
   }
+  
   .footer-card {
     max-width: 720px;
     padding-inline: 2.4rem;
   }
-}
+
   .about__content {
     grid-template-columns:1.4fr 1fr;
     column-gap: 2rem;
@@ -788,7 +787,7 @@ p {
   .recipe-detail__card {
     padding: 2.5rem;
   }
-}
+  }
 
 /* ========== Motion-Reduktion ========== */
 
