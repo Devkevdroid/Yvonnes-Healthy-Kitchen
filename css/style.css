@@ -1,5 +1,11 @@
+@font-face {
+  font-family: "Georgia Pro";
+  src: url("../fonts/GeorgiaPro-Light.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
 :root {
-  /* Farben */
   --bg: #fffdf7;
   --pastellgelb: #fff5b8;
   --pastellrosa: #f8c6c8;
@@ -7,6 +13,7 @@
   --salbei: #a3b18a;
   --pfirsich: #ffd6a5;
   --text: #3e3e3e;
+  --salbei-dark: #7a8b63;
 
   /* Layout & Effekte */
   --radius-lg: 24px;
@@ -20,12 +27,16 @@
 *::before,
 *::after {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-  margin: 0;
-  font-family: "Nunito", "Karla", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: "Georgia Pro", Georgia, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
   color: var(--text);
+  font-weight:300;
+  font-size: 16px;
+  line-height: 1.5;
   background: linear-gradient(
     180deg,
     #fffdf7 0%,
@@ -33,7 +44,6 @@ body {
     rgba(255, 235, 240, 0.4) 75%,
     rgba(255, 245, 200, 0.35) 100%
   );
-  line-height: 1.6;
 }
 
 main {
@@ -63,6 +73,20 @@ img {
 a {
   color: inherit;
   text-decoration: none;
+}
+
+/* Typografie */
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: 22px;
+  font-weight: 300;
+  margin-bottom: 0.75rem;
+}
+
+p {
+  text-align: justify;
+  hyphens: auto;
+  margin-bottom: 0.75rem;
 }
 
 /* Utility */
@@ -102,33 +126,34 @@ a {
 }
 
 .site-header__logo {
-  width: 72px;
-  height: 72px;
+  width: 100px;
+  height: 100px;
   margin: 0 auto 0.5rem;
   border-radius: 50%;
   background: var(--cremeweiss);
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
+  transform:translateY(2px);
 }
 
 .site-header__logo-img {
-  width: 70%;
-  height: 70%;
+  width: 85%;
+  height: 85%;
   object-fit: contain;
 }
 
 .site-header__title {
-  margin: 0 0 0.35rem;
-  font-size: 1.25rem;
-  font-weight: 600;
-  color: var(--salbei);
+  margin: 0 0 0.5rem;
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: var(--salbei-dark);
 }
 
 .site-header__subtitle {
   margin: 0 0 1.25rem;
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   line-height: 1.5;
   color: rgba(62, 62, 62, 0.85);
 }
