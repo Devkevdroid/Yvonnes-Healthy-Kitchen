@@ -5,6 +5,7 @@
   font-style: normal;
   font-display: swap;
 }
+
 :root {
   --bg: #fffdf7;
   --pastellgelb: #fff5b8;
@@ -34,8 +35,8 @@
 body {
   font-family: "Georgia Pro", Georgia, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
   color: var(--text);
-  font-weight:300;
-  font-size: 16px;
+  font-weight: 300;
+  font-size: 16px; /* ≈ 12pt */
   line-height: 1.5;
   background: linear-gradient(
     180deg,
@@ -77,10 +78,35 @@ a {
 
 /* Typografie */
 
-h1, h2, h3, h4, h5, h6 {
-  font-size: 22px;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-weight: 300;
-  margin-bottom: 0.75rem;
+  line-height: 1.3;
+  margin: 0 0 0.75rem;
+}
+
+/* 16pt-Äquivalent für die Hauptüberschriften */
+h1,
+h2 {
+  font-size: 22px;
+}
+
+/* leichte Abstufung für die restlichen Überschriften */
+h3 {
+  font-size: 1.15rem;
+}
+
+h4 {
+  font-size: 1rem;
+}
+
+h5,
+h6 {
+  font-size: 0.9rem;
 }
 
 p {
@@ -135,7 +161,7 @@ p {
   align-items: center;
   justify-content: center;
   box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
-  transform:translateY(2px);
+  transform: translateY(2px);
 }
 
 .site-header__logo-img {
@@ -153,9 +179,10 @@ p {
 
 .site-header__subtitle {
   margin: 0 0 1.25rem;
-  font-size: 0.95rem;
-  line-height: 1.5;
-  color: rgba(62, 62, 62, 0.85);
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #4a4a4a;         /* dunkler, besser lesbar */
+  text-align: center;     /* kein Blocksätzchen hier */
 }
 
 .logo {
@@ -198,6 +225,12 @@ p {
   background: #ffe97a;
   transform: translateY(-1px);
   box-shadow: 0 6px 14px rgba(0, 0, 0, 0.08);
+}
+
+/* Fokus-Ring für Tastatur-Nutzer */
+.site-nav a:focus-visible {
+  outline: 2px solid var(--salbei-dark);
+  outline-offset: 3px;
 }
 
 /* Variante für Detail-Seiten (z. B. Rezeptdetail) */
@@ -253,6 +286,11 @@ p {
   transform: translateY(-2px);
 }
 
+.button:focus-visible {
+  outline: 2px solid var(--salbei-dark);
+  outline-offset: 3px;
+}
+
 .button--primary {
   background: var(--salbei);
   color: var(--cremeweiss);
@@ -264,8 +302,82 @@ p {
   background: transparent;
 }
 
-/* ========== Cards & Layout-Blöcke ========== */
+/* ========== Cards, About & Layout-Blöcke ========== */
+/* ABOUT CARD */
+.about__card {
+  background: var(--cremeweiss);
+  border-radius: var(--radius-lg);
+  padding: 1.75rem;
+  box-shadow: var(--shadow-soft);
+}
 
+/* Mobile Layout */
+.about__content {
+  display: grid;
+  gap: 1.5rem;
+}
+
+/* Portrait */
+.about__photo {
+  width: 100%;
+  max-width: 300px;
+  margin: 0 auto;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-soft);
+}
+
+.about__photo img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+/* Text */
+.about__text p + p {
+  margin-top: 0.75rem;
+}
+
+/* Häkchen-Liste */
+.about__list {
+  list-style: none;
+  padding: 0;
+  margin: 0.75rem 0 1rem;
+}
+
+.about__list li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.35rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
+/* ✔ über span.green */
+.green {
+  color: var(--salbei);
+  font-weight: 700;
+  margin-right: 0.45rem;
+}
+
+/* ♡ Herz */
+.herz {
+  color: var(--salbei);
+  font-size: 1.1em;
+}
+
+/* Desktop / Tablet Layout */
+@media (min-width: 768px) {
+  .about__content {
+    grid-template-columns: 2fr 1fr; /* Text links – Bild rechts */
+    align-items: start;
+  }
+
+  .about__photo {
+    margin: 0;
+    justify-self: end;
+  }
+}
 .about__card,
 .info-card {
   background: var(--cremeweiss);
@@ -273,7 +385,51 @@ p {
   padding: 1.5rem;
   box-shadow: 0 4px 20px rgba(255, 235, 170, 0.25);
 }
+#about-title {
+  text-align:center;
+}
+.green {
+  color:var(--salbei);
+}
+.herz {
+  color: var(--pastellrosa);
+  font-size: 1.1em;
+}
 
+.about__content {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.about__photo {
+  max-width: 260px;
+  margin: 0 auto;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-soft);
+}
+
+.about__photo img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.about__text p + p {
+  margin-top: 0.75rem;
+}
+
+.about__list {
+  list-style: none;
+  padding: 0;
+  margin: 0.75rem 0;
+}
+
+.about__list li {
+  margin-left: 0;
+  margin-bottom: 0.4rem;
+  font-weight: 600;
+}
 .info-grid {
   display: grid;
   gap: 1rem;
@@ -334,6 +490,11 @@ p {
   color: var(--cremeweiss);
 }
 
+.chip:focus-visible {
+  outline: 2px solid var(--salbei-dark);
+  outline-offset: 3px;
+}
+
 .recipe-grid {
   display: grid;
   gap: 1.25rem;
@@ -365,7 +526,7 @@ p {
   width: 100%;
   aspect-ratio: 1 / 1;
   object-fit: cover;
-  border-radius: 10%;
+  border-radius: 50%;
 }
 
 .recipe-card__content {
@@ -562,5 +723,16 @@ p {
 
   .recipe-detail__card {
     padding: 2.5rem;
+  }
+}
+
+/* ========== Motion-Reduktion ========== */
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
   }
 }
