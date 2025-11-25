@@ -13,7 +13,7 @@
     rel="stylesheet" />
 
   <!-- Styles -->
-  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/styles.css" />
 
   <!-- Favicons -->
   <link rel="icon" type="image/x-icon" href="favicon.ico" />
@@ -53,7 +53,7 @@
 
       <nav class="site-nav" aria-label="Hauptnavigation">
         <a class="site-nav__pill" href="#rezepte">Rezepte</a>
-        <a class="site-nav__pill" href="#ernaehrung">Ernährungstipps</a>
+        <a class="site-nav__pill" href="ernaehrungstipps.html">Ernährungstipps</a>
         <a class="site-nav__pill" href="#kontakt">Kontakt</a>
       </nav>
     </div>
@@ -71,7 +71,9 @@
 
         <div class="about__content">
 
-
+          <figure class="about__photo">
+            <img src="assets/yvonne.jpg" alt="Yvonne Heinze – Trainerin und Ernährungsberaterin" loading="lazy">
+          </figure>
 
           <div class="about__text">
             <p>
@@ -115,9 +117,7 @@
               hinterlassen möchtest, kannst du das gerne per Email tun. <span class="herz">♡</span>
             </p>
           </div>
-          <figure class="about__photo">
-            <img src="assets/yvonne.jpg" alt="Yvonne Heinze – Trainerin und Ernährungsberaterin" loading="lazy">
-          </figure>
+
         </div>
       </div>
     </section>
@@ -162,36 +162,11 @@
       </div>
     </section>
 
-    <!-- ERNÄHRUNG -->
-    <section class="nutrition" id="ernaehrung" aria-labelledby="nutrition-title">
-      <div class="section-header">
-        <h2 id="nutrition-title">Einfache Ernährungstipps</h2>
-        <p>Kleine Basics für mehr Balance auf dem Teller.</p>
-      </div>
-
-      <div class="info-grid">
-        <article class="info-card">
-          <h3>Ausgewogene Mahlzeiten</h3>
-          <p>1/2 Gemüse, 1/4 Protein, 1/4 gute Kohlenhydrate – plus gesunde Fette.</p>
-        </article>
-
-        <article class="info-card">
-          <h3>Must-have-Lebensmittel</h3>
-          <p>Haferflocken, Linsen, TK-Beeren, Nussmus, Kräuter – vielseitig und budgetfreundlich.</p>
-        </article>
-
-        <article class="info-card">
-          <h3>Meal-Prep Tipp</h3>
-          <p>Basis vorkochen, Gemüse + Dips variieren – spart Zeit & Kalorien.</p>
-        </article>
-      </div>
-    </section>
-
     <!-- KONTAKT -->
     <section class="contact" id="kontakt" aria-labelledby="contact-title">
       <div class="contact-card">
         <h2 id="contact-title">Kontakt</h2>
-        <p>Fragen oder Feedback? Ich freue mich auf deine Nachricht!</p>
+        <p>Hast du Fragen? Ich freue mich auf deine Nachricht!</p>
         <a class="button button--ghost" href="mailto:yheinze.coaching.mit.herz@gmail.com">Schreib mir eine Mail!</a>
       </div>
     </section>
@@ -200,11 +175,14 @@
 
   <!-- ============ FOOTER ============ -->
   <footer class="site-footer">
-    <p>
-      Meine Rezepte und Tipps teile ich privat – sie ersetzen keine medizinische Beratung
-      und sind nicht als Coaching-Angebot gedacht.
-    </p>
+    <div class="footer-card">
+      <div class="footer-badge">i</div>
+      <p>
+        Alle Inhalte dieser Seite teile ich privat. Sie ersetzen keine medizinische Beratung und/oder Betreuung.
+      </p>
+    </div>
   </footer>
+
 
   <!-- SCRIPTS -->
   <script src="js/main.js" defer></script>
