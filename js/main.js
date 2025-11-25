@@ -155,3 +155,26 @@ document.addEventListener('DOMContentLoaded', () => {
       statusEl.textContent = 'Rezepte konnten nicht geladen werden.';
     });
 });
+// -------------------------
+// Kompakte Header-Bar: einblenden nach Scroll
+// -------------------------
+(function () {
+  const header = document.querySelector('.site-header');
+  const bar = document.querySelector('.site-header-bar');
+  if (!header || !bar) return;
+
+  const VISIBLE_CLASS = 'site-header-bar--visible';
+
+  function updateBar() {
+    const scrollY = window.scrollY || window.pageYOffset;
+
+    // Schwelle: Unterkante des großen Headers
+    const headerBottom = header.offsetTop + header.offsetHeight;
+
+    const shouldShow = scrollY > headerBottom + 16;
+    bar.classList.toggle(VISIBLE_CLASS, shouldShow);
+  }
+
+  updateBar();
+  window.addEventListener('scroll', updateBar, { passive: true });
+})();
