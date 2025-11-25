@@ -8,16 +8,46 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600&family=Karla:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/styles.css">
 </head>
 
 <body>
-  <header class="site-header site-header--detail">
-    <a class="logo" href="../index.html">Yvonnes Healthy Kitchen</a>
-    <a class="button button--ghost" href="../index.html#rezepte">← Zur Übersicht</a>
+    <!-- ============ HEADER ============ -->
+  <header class="site-header" id="seitenanfang">
+    <div class="site-header__inner">
+      <div class="site-header__logo">
+        <img src="../assets/yh-logo.png" alt="Yvonnes Healthy Kitchen Logo" class="site-header__logo-img" />
+      </div>
+
+      <div>
+        <h1 class="site-header__title">Yvonnes Healthy Kitchen</h1>
+        <p class="site-header__subtitle">
+          Rezepte für eine gesunde und ausgewogene Ernährung – ohne Stress und Verzicht.
+        </p>
+      </div>
+
+      <nav class="site-nav" aria-label="Hauptnavigation">
+        <a class="site-nav__pill" href="../index.html#rezepte">Rezepte</a>
+        <a class="site-nav__pill" href="../ernaehrungstipps.html">Ernährungstipps</a>
+        <a class="site-nav__pill" href="../index.html#kontakt">Kontakt</a>
+      </nav>
+    </div>
   </header>
 
-  <main class="recipe-detail">
+  <!-- ============ KOMPAKTE SCROLL-BAR ============ -->
+  <div class="site-header-bar" aria-label="Kompakte Navigation">
+    <div class="site-header-bar__inner">
+      <a href="#seitenanfang" class="site-header-bar__logo">
+        <img src="../assets/yh-logo.png" alt="Zur Seitenüberschrift springen" />
+      </a>
+      <nav class="site-header-bar__nav">
+        <a class="site-header-bar__pill" href="../index.html#rezepte">Rezepte</a>
+        <a class="site-header-bar__pill" href="../ernaehrungstipps.html">Tipps</a>
+        <a class="site-header-bar__pill" href="../index.html#kontakt">Kontakt</a>
+      </nav>
+    </div>
+  </div>
+<main class="recipe-detail">
     <article class="recipe-detail__card">
       <header class="recipe-detail__hero">
         <div class="recipe-detail__image">
@@ -74,12 +104,18 @@
     </article>
   </main>
 
+    <!-- ============ FOOTER ============ -->
   <footer class="site-footer">
-    <p>Private Seite von Yvonne: keine medizinische Beratung, keine Coaching-Angebote.</p>
+    <div class="footer-card">
+      <div class="footer-badge">i</div>
+      <p>
+        Alle Inhalte dieser Seite teile ich privat. Sie ersetzen keine medizinische Beratung und/oder Betreuung.
+      </p>
+    </div>
   </footer>
-
-  <script src="../js/main.js" defer></script>
+<script src="../js/main.js" defer></script>
 </body>
 
 </html>
+
 

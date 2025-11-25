@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="de">
 
 <head>
@@ -9,16 +9,46 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600&family=Karla:wght@400;700&display=swap"
     rel="stylesheet">
-  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/styles.css">
 </head>
 
 <body>
-  <header class="site-header site-header--detail">
-    <a class="logo" href="../index.html">Yvonnes Healthy Kitchen</a>
-    <a class="button button--ghost" href="../index.html#rezepte">← Zur Übersicht</a>
+    <!-- ============ HEADER ============ -->
+  <header class="site-header" id="seitenanfang">
+    <div class="site-header__inner">
+      <div class="site-header__logo">
+        <img src="../assets/yh-logo.png" alt="Yvonnes Healthy Kitchen Logo" class="site-header__logo-img" />
+      </div>
+
+      <div>
+        <h1 class="site-header__title">Yvonnes Healthy Kitchen</h1>
+        <p class="site-header__subtitle">
+          Rezepte für eine gesunde und ausgewogene Ernährung – ohne Stress und Verzicht.
+        </p>
+      </div>
+
+      <nav class="site-nav" aria-label="Hauptnavigation">
+        <a class="site-nav__pill" href="../index.html#rezepte">Rezepte</a>
+        <a class="site-nav__pill" href="../ernaehrungstipps.html">Ernährungstipps</a>
+        <a class="site-nav__pill" href="../index.html#kontakt">Kontakt</a>
+      </nav>
+    </div>
   </header>
 
-  <main class="recipe-detail">
+  <!-- ============ KOMPAKTE SCROLL-BAR ============ -->
+  <div class="site-header-bar" aria-label="Kompakte Navigation">
+    <div class="site-header-bar__inner">
+      <a href="#seitenanfang" class="site-header-bar__logo">
+        <img src="../assets/yh-logo.png" alt="Zur Seitenüberschrift springen" />
+      </a>
+      <nav class="site-header-bar__nav">
+        <a class="site-header-bar__pill" href="../index.html#rezepte">Rezepte</a>
+        <a class="site-header-bar__pill" href="../ernaehrungstipps.html">Tipps</a>
+        <a class="site-header-bar__pill" href="../index.html#kontakt">Kontakt</a>
+      </nav>
+    </div>
+  </div>
+<main class="recipe-detail">
     <article class="recipe-detail__card">
       <header class="recipe-detail__hero">
         <div class="recipe-detail__image">
@@ -29,14 +59,14 @@
             <li class="recipe-detail__tag">Herzhaft</li>
           </ul>
           <h1>Chili con Carne</h1>
-          <p class="recipe-detail__lead">Der Meal-Prep-Klassiker für Bowls, Wraps &amp; Co – viel Protein, viel
+          <p class="recipe-detail__lead">Der Meal-Prep-Klassiker fÃ¼r Bowls, Wraps &amp; Co â€“ viel Protein, viel
             Geschmack.</p>
-          <p class="recipe-detail__meta">Angaben für die gesamte Portion. Einfach durch Wunschportionen teilen.</p>
+          <p class="recipe-detail__meta">Angaben fÃ¼r die gesamte Portion. Einfach durch Wunschportionen teilen.</p>
         </div>
       </header>
 
       <section class="recipe-detail__section">
-        <h2>Nährwerte</h2>
+        <h2>NÃ¤hrwerte</h2>
         <div class="recipe-detail__facts">
           <div class="recipe-detail__fact">
             <span>Kalorien</span>
@@ -49,7 +79,7 @@
             <small>gesamt</small>
           </div>
           <div class="recipe-detail__fact">
-            <span>Eiweiß</span>
+            <span>EiweiÃŸ</span>
             <strong>129 g</strong>
             <small>gesamt</small>
           </div>
@@ -59,13 +89,13 @@
             <small>gesamt</small>
           </div>
         </div>
-        <p class="recipe-detail__note">Portioniere das Chili nach Bedarf – kalt oder warm ein Genuss.</p>
+        <p class="recipe-detail__note">Portioniere das Chili nach Bedarf â€“ kalt oder warm ein Genuss.</p>
       </section>
 
       <section class="recipe-detail__section">
         <h2>Gut zu wissen</h2>
-        <p>Ein Topf, wenig Aufwand: Während alles köchelt, kannst du Toppings vorbereiten.</p>
-        <p>Im PDF findest du Gewürzvarianten, Bohnen-Alternativen und frische Topping-Ideen.</p>
+        <p>Ein Topf, wenig Aufwand: WÃ¤hrend alles kÃ¶chelt, kannst du Toppings vorbereiten.</p>
+        <p>Im PDF findest du GewÃ¼rzvarianten, Bohnen-Alternativen und frische Topping-Ideen.</p>
       </section>
 
       <section class="recipe-detail__section recipe-detail__download">
@@ -76,11 +106,16 @@
     </article>
   </main>
 
+    <!-- ============ FOOTER ============ -->
   <footer class="site-footer">
-    <p>Private Seite von Yvonne: keine medizinische Beratung, keine Coaching-Angebote.</p>
+    <div class="footer-card">
+      <div class="footer-badge">i</div>
+      <p>
+        Alle Inhalte dieser Seite teile ich privat. Sie ersetzen keine medizinische Beratung und/oder Betreuung.
+      </p>
+    </div>
   </footer>
-
-  <script src="../js/main.js" defer></script>
+<script src="../js/main.js" defer></script>
 </body>
 
 </html>
